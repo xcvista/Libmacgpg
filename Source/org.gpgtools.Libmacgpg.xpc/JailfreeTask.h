@@ -8,11 +8,9 @@
 #import "JailfreeProtocol.h"
 #import <Foundation/Foundation.h>
 
-@class Paddle;
-
 @interface JailfreeTask :  NSObject <Jailfree> {
 	NSXPCConnection * __weak _xpcConnection;
-    Paddle *_paddle;
+    id _paddle;
 }
 
 - (void)testConnection:(void (^)(BOOL))reply;
